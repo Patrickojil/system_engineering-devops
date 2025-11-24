@@ -1,1 +1,1 @@
-this directory contains shell permissions
+This directory contains shell permissions
