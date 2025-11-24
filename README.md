@@ -1,3 +1,3 @@
 # system_engineering-devops
-shell permisions
-shell basics
+-shell permisions
+-shell basics
