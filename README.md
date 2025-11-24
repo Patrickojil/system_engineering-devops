@@ -1,2 +1,3 @@
 # system_engineering-devops
-current working directory showing
+shell permisions
+shell basics
