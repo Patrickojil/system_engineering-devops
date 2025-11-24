@@ -1,2 +1,2 @@
 #!/bin/bash
-su chown betty learning.txt
+su betty
