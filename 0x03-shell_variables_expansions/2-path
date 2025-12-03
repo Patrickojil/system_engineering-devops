@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$PATH"
+ NEW_PATH=$(echo "$PATH" | sed -e 's|:/action:|:|g' -e 's|^/action:||' -e 's|:/action$||' -e 's|^/action$||')
