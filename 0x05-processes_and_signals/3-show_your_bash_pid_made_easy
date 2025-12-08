@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 # This script displays PID and process name for all processes containing "bash"
 
-pgrep -a bash | awk '{print $1, $NF}'
+pgrep bash | while read -r pid; do
+    # Get process name from /proc
+    if [ -f "/proc/$pid/comm" ]; then
+        name=$(cat "/proc/$pid/comm")
+        echo "$pid $name"
+    fi
+done
