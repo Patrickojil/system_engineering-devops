@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script lists files in current directory, showing only text after first dash
+
+for file in *; do
+    # Skip if it's a directory or hidden file
+    if [ -f "$file" ]; then
+        # Extract everything after the first dash (-)
+        # If no dash found, show the full name
+        echo "$file" | cut -d'-' -f2-
+    fi
+done
