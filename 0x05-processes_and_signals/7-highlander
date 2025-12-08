@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# This script sends SIGTERM to the 7-highlander process
+# This script displays "To infinity and beyond" indefinitely and handles SIGTERM
 
-# Find all instances of 7-highlander
-pids=$(pgrep -f "7-highlander")
+# Trap SIGTERM signal to print message instead of terminating
+trap 'echo "I am invincible!!!"' TERM
 
-# Send SIGTERM to each one
-for pid in $pids; do
-    kill -TERM "$pid" 2>/dev/null
-    echo "Sent SIGTERM to 7-highlander (PID: $pid)"
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
 done
