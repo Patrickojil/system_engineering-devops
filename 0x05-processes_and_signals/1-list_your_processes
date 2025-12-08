@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script displays all running processes in a hierarchical format
 
-ps axo user:12,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,comm --forest
+ps ax --format user:12,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,comm --forest
