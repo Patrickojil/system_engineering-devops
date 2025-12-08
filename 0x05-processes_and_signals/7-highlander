@@ -9,3 +9,9 @@ while true; do
     echo "To infinity and beyond"
     sleep 2
 done
+# Copy from 6-stop_me_if_you_can or create new
+cp 6-stop_me_if_you_can 67-stop_me_if_you_can
+
+# Or create directly
+nano 67-stop_me_if_you_can
+
