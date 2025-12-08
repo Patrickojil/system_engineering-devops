@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
-# This script sends SIGTERM to the 7-highlander process
+# This script displays "To infinity and beyond" indefinitely and handles SIGTERM
 
-# Find the PID of 7-highlander
-pid=$(pgrep -f "7-highlander")
+# Trap signals
+trap 'echo "I am invincible!!!"' TERM
+trap 'echo ""; exit 0' INT  # Handle Ctrl+C gracefully
 
-# Send SIGTERM signal if found
-if [ -n "$pid" ]; then
-    # Use Bash's built-in kill to send SIGTERM (signal 15)
-    kill -TERM "$pid" 2>/dev/null
-fi
+echo "Running 7-highlander (Press Ctrl+C to stop)"
+echo ""
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
