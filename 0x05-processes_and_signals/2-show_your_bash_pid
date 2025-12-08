@@ -1,1 +1,5 @@
+#!/usr/bin/env bash
+# This script displays only lines containing "bash" from the process list
+# shellcheck disable=SC2009
 
+ps axo user:12,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,comm --forest | grep bash
